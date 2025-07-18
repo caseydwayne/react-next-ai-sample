@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# Live Demo 
+
+Deployed to Vercel: [react-next-ai-sample.vercel.app](https://react-next-ai-sample.vercel.app/)
+
+![screenshot](https://temp.caseydwayne.com/react-next-ai-sample/react-next-ai-sample.vercel.app_.png)
+
+
 ## Getting Started
 
 First, run the development server:
