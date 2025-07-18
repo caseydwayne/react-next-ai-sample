@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react'
 
-export default function SummaryGenerator( { report } ){
+type ReportData = any
+
+export default function SummaryGenerator( { report }: { report: ReportData } ){
 
   const [summary, setSummary] = useState('')
 
