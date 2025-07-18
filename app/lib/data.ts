@@ -3,7 +3,7 @@ export default {
   "facility_id": "alpha-001",
   "location": "Knoxville, TN",
   "date_range": {
-    "start": "2025-06-01",
+    "start": "2025-07-01",
     "end": "2025-07-15"
   },
   "staff": [
