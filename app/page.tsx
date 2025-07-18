@@ -1,5 +1,19 @@
 import data from './lib/data'
 import SeverityBadge from './ui/SeverityBadge'
+import SummaryGenerator from './ui/SummaryGenerator'
+
+async function generateSummary(){
+  const res = await fetch( '/api/ai', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify( data ),
+  })
+
+  const result = await res.json()
+  console.log( result.summary )
+}
 
 export default function Home() {
   return (
@@ -37,6 +51,14 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-4">
+            Report Summary{' '}
+            <span className="text-sm text-gray-500 font-normal">(AI Generated)</span>
+          </h2>
+          <SummaryGenerator report={data} />
+        </section>
+
         <section>
           <h2 className="text-2xl font-semibold mb-4">Incident Reports</h2>
           <div className="space-y-6 max-h-[600px] overflow-y-auto">
@@ -65,6 +87,7 @@ export default function Home() {
             )) }
           </div>
         </section>
+
       </main>
     </div>
   );
